@@ -19,6 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
     renderer.render(scene,camera);
 
     document.body.appendChild(renderer.domElement);
- 
 });
 
