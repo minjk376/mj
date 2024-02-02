@@ -1,4 +1,4 @@
-import * as THREE from '../applications-20230306/applications/libs/three.js-r132/build/three.module';
+import * as THREE from 'three';
 
 document.addEventListener("DOMContentLoaded", () => {
     const scene = new THREE.Scene();
