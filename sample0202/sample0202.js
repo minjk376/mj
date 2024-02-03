@@ -30,4 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.appendChild(video);
   document.body.appendChild(renderer.domElement);
+
+  // pseudo engine이라는데
+  // const ar = new SOME_AR_ENGINE();
+  // while (true) {
+  //     await nextVideoFrameReady();
+  //     const {position, rotation} = ar.computeObjectPose(video);
+  //     cube.position = position;
+  //     cube.rotation = rotation;
+  // }
 });
