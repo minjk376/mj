@@ -1,4 +1,3 @@
-//const THREE = window.MINDAR.IMAGE.THREE; 로 하면 실행 안됨. modularize 작업??
 import * as THREE from 'three';
 import {MindARThree} from 'mindar-image-three';
 
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
         // const mindarTHREE = new window.MINDAR.IMAGE.mindarTHREE({ 로 하면 실행 안됨
         const mindarThree = new MindARThree({
-            container: document.body,
+            container: document.querySelector("#my-ar-container"),
             imageTargetSrc: './targets.mind'
         });
         const { renderer, scene, camera } = mindarThree;
