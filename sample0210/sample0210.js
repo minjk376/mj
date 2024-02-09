@@ -1,12 +1,11 @@
-//const THREE = window.MINDAR.IMAGE.THREE; 로 하면 실행 안됨. modularize 작업??
+// 아래 코드 상대 경로 설정에 문제가 있는 것 같은데.....
+// import { GLTFLoader } from "../applications-20230306/applications/libs/three.js-r132/examples/jsm/loaders/GLTFLoader.js"
+
 import * as THREE from 'three';
 import {MindARThree} from 'mindar-image-three';
 
-// 아래는 페이지가 로드되면 실행되는 함수를 의미함
 document.addEventListener('DOMContentLoaded', () => {
-    // mindarTHREE 객체를 생성하고 초기 설정을 전달하여 초기화하는 것
     const start = async () => {
-        // const mindarTHREE = new window.MINDAR.IMAGE.mindarTHREE({ 로 하면 실행 안됨
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: './targets.mind'
@@ -19,9 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const plane = new THREE.Mesh(geometry, material);
 
         // create anchor
-        // scene에 anchor 추가하고 앵커에 해당하는 정보나 설정이 전달되면 해당 내용을 처리하는 역할을 함
         const anchor = mindarThree.addAnchor(0);
         anchor.group.add(plane);
+
+        // const loader = new GLTFLoader();
+        // loader.load("../applications-20230306/applications/assets/models/musicband-raccoon/scene.gltf", (gltf) => {
+        //     //gltf.scene: THREE.Group
+        //     anchor.group.add(gltf.scene);
+        // });
 
         // start AR
         await mindarThree.start();
