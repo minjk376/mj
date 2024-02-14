@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
-import { loadGLTF } from "../applications-20230306/applications/libs/loader.js";
+import { loadGLTF } from "./loader.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
