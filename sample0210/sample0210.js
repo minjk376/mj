@@ -1,5 +1,3 @@
-import { GLTFLoader } from "../../mj/applications-20230306/applications/libs/loader.js";
-
 import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
 import { loadGLTF } from "../applications-20230306/applications/libs/loader.js";
