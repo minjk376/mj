@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
-import { loadGLTF } from "./loader.js";
+import { loadGLTF } from "../applications-20230306/applications/libs/loader.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const anchor = mindarThree.addAnchor(0);
 
-        const gltf = await loadGLTF("./scene.gltf");
+        const gltf = await loadGLTF('./scene.gltf');
         gltf.scene.scale.set(0.1, 0.1, 0.1);
         gltf.scene.position.set(0, -0.4, 0);
         anchor.group.add(gltf.scene);
